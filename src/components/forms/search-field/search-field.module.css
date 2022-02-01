@@ -1,0 +1,47 @@
+@tailwind components;
+
+@layer components {
+  div.search-box {
+    @apply flex 
+    w-full 
+    h-11 
+    pt-0 
+    rounded 
+    border-0 
+    transition-all 
+    duration-200 
+    ease-in-out 
+    cursor-text;
+  }
+  .search-button {
+    @apply w-0 
+    flex-none 
+    rounded-none 
+    hover:bg-gray-lighter 
+    active:ring-transparent 
+    active:border-transparent 
+    focus:ring-transparent 
+    focus:border-transparent;
+  }
+  .search-cancel {
+    @apply w-0  
+    hover:bg-white-default 
+    active:bg-white-default 
+    active:ring-transparent;
+  }
+  .search-field {
+    @apply flex-auto 
+    w-full 
+    placeholder:text-gray-default 
+    border-0 
+    p-1 
+    mt-0 
+    text-base 
+    text-black-default 
+    bg-transparent 
+    focus:outline-transparent 
+    border-transparent 
+    focus:border-transparent 
+    focus:ring-0;
+  }
+}

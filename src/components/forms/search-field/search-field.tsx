@@ -3,6 +3,7 @@ import { Button } from '../../button/button';
 import { CancelSVG } from '../../icons/cancel-svg';
 import { MagnifyingGlassSVG } from '../../icons/magnifying-glass-svg';
 import { Shadow } from '../../shadows/shadow';
+import styles from './search-field.module.css';
 
 /* 
   TODO: 
@@ -53,12 +54,12 @@ const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
 
     return (
       <Shadow shadowType="default" inlineFlex={false}>
-        <div className="flex w-full h-11 pt-0 rounded border-0 transition-all duration-200 ease-in-out cursor-text">
+        <div className={styles['search-box']}>
           <Button
             type="submit"
             buttonType="flat"
             buttonHeight="large"
-            className="w-10 flex-none rounded-none active:ring-transparent active:border-transparent focus:ring-transparent focus:border-transparent"
+            className={`${styles['search-button']}`}
           >
             <MagnifyingGlassSVG
               className={
@@ -76,16 +77,14 @@ const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
             onChange={valueChangeHandler}
             onFocus={focusHandler}
             onBlur={validationHandler}
-            className={`${
-              isNotTouchedYet ? '' : ''
-            } flex-auto w-full placeholder:text-gray-default border-0 p-1 mt-0 text-base text-black-default bg-transparent focus:outline-transparent border-transparent focus:border-transparent focus:ring-0`}
+            className={`${isNotTouchedYet ? '' : ''} ${styles['search-field']}`}
           />
           <Button
             type="button"
             buttonType="flat"
             buttonHeight="large"
             onClick={resetInputFieldHandler}
-            className="w-0 flex-none rounded-none hover:bg-white-default active:bg-white-default active:ring-transparent active:border-transparent focus:ring-transparent focus:border-transparent"
+            className={`${styles['search-button']} ${styles['search-cancel']}`}
           >
             <div className="pl-1 pt-1">
               <CancelSVG className="fill-gray-default hover:fill-black-default" />

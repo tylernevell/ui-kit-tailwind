@@ -1,0 +1,80 @@
+@tailwind components;
+
+@layer components {
+  .btn-base {
+    @apply grid 
+    gap-2 
+    grid-flow-col 
+    px-5 
+    py-1 
+    items-center 
+    justify-center 
+    whitespace-nowrap 
+    text-base 
+    rounded 
+    transition-all 
+    duration-200 
+    ease-in-out 
+    disabled:cursor-not-allowed 
+    drop-shadow-sm 
+    shadow-sm 
+    shadow 
+    font-medium;
+  }
+  .primary {
+    @apply text-white-default 
+    border 
+    bg-primary-default 
+    disabled:bg-primary-disabled 
+    disabled:ring-transparent 
+    disabled:border-transparent 
+    hover:bg-primary-hover 
+    active:bg-primary-active 
+    active:border-gray-default 
+    focus:ring-2 
+    focus:ring-gray-default 
+    focus:border-transparent;
+  }
+  .secondary {
+    @apply bg-white-default 
+    border 
+    ring-2 
+    ring-primary-default 
+    disabled:text-primary-disabled 
+    disabled:ring-primary-disabled 
+    disabled:bg-white-default 
+    disabled:border-transparent 
+    hover:bg-secondary-hover 
+    active:bg-secondary-active 
+    active:border-gray-default 
+    focus:border-transparent 
+    focus:ring-2 
+    focus:ring-gray-default;
+  }
+  .flat {
+    @apply bg-white-default 
+    border 
+    drop-shadow-none 
+    shadow-none 
+    border-transparent 
+    hover:bg-secondary-hover 
+    disabled:text-primary-disabled 
+    disabled:ring-primary-disabled 
+    disabled:bg-white-default 
+    disabled:border-transparent 
+    active:bg-secondary-active 
+    active:border-gray-default 
+    focus:ring-2 
+    focus:ring-gray-default 
+    focus:border-transparent;
+  }
+  .small {
+    @apply h-8;
+  }
+  .medium {
+    @apply h-9;
+  }
+  .large {
+    @apply h-11;
+  }
+}

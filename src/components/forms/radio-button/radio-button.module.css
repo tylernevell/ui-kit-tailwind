@@ -1,0 +1,23 @@
+@tailwind components;
+
+@layer components {
+  .input-base {
+    @apply h-5 
+    w-5 
+    self-center 
+    transition-all 
+    duration-200 
+    ease-in-out 
+    cursor-pointer 
+    border-primary-default 
+    border-2 
+    checked:bg-primary-default 
+    checked:hover:bg-primary-hover 
+    checked:focus:bg-primary-default 
+    focus:checked:ring-2 
+    focus:checked:ring-primary-default 
+    disabled:cursor-not-allowed 
+    hover:bg-secondary-active 
+    focus:hover:bg-primary-hover;
+  }
+}
