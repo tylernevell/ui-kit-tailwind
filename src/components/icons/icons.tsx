@@ -1,4 +1,6 @@
 import { CancelSVG } from './cancel-svg';
+import { CheckmarkSVG } from './checkmark-svg';
+import { InfoSVG } from './info-svg';
 import { MagnifyingGlassSVG } from './magnifying-glass-svg';
 
 const Icons = () => {
@@ -6,6 +8,8 @@ const Icons = () => {
     <>
       <MagnifyingGlassSVG />
       <CancelSVG />
+      <CheckmarkSVG />
+      <InfoSVG />
     </>
   );
 };

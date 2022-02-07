@@ -80,7 +80,7 @@ const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
             className={`${isNotTouchedYet ? '' : ''} ${styles['search-field']}`}
           />
           <Button
-            type="button"
+            type="reset"
             buttonType="flat"
             buttonHeight="large"
             onClick={resetInputFieldHandler}

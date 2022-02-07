@@ -1,22 +1,16 @@
 import { forwardRef } from 'react';
-import styles from './radio-button.module.css';
-/*
-  TODO:
-    1. Add and fix disabled CSS class
-    2. Add typography for name
-*/
+import styles from './checkbox.module.css';
 
-interface RadioProps {
+interface CheckboxProps {
   name: string;
   value: string;
   checked?: boolean;
   disabled?: boolean;
   ariaChecked?: boolean;
   onChange?: (event: React.ChangeEvent) => void;
-  className?: string;
 }
 
-const RadioButton = forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
+const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
   const {
     name = 'Text',
     value = 'text',
@@ -24,17 +18,16 @@ const RadioButton = forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
     disabled,
     ariaChecked = false,
     onChange,
-    className,
   } = props;
 
   return (
     <label
       htmlFor={value}
       aria-labelledby="gdesc1"
-      className="text-lg inline-flex flex-nowrap gap-2.5 cursor-pointer"
+      className="text-base inline-flex flex-nowrap gap-2.5 cursor-pointer "
     >
       <input
-        type="radio"
+        type="checkbox"
         id={value}
         ref={ref}
         name={name}
@@ -43,10 +36,14 @@ const RadioButton = forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
         disabled={disabled}
         aria-checked={ariaChecked}
         onChange={onChange}
-        className={`${styles['input-base']} ${className}`}
+        className={styles['checkbox-primary']}
       />
       <span
-        className={`text-black-default ${disabled ? 'cursor-not-allowed' : ''}`}
+        className={`${
+          disabled
+            ? 'cursor-not-allowed text-gray-default '
+            : 'text-black-default '
+        }`}
       >
         {name}
       </span>
@@ -54,6 +51,6 @@ const RadioButton = forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
   );
 });
 
-RadioButton.displayName = 'RadioButton';
+Checkbox.displayName = 'Checkbox';
 
-export { RadioButton };
+export { Checkbox };
