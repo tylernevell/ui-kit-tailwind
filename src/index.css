@@ -54,3 +54,23 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer components {
+  .shadow-primary {
+    @apply transition-all 
+    duration-200 
+    ease-in-out 
+    shadow-lg;
+  }
+  .shadow-default {
+    @apply shadow-gray-lighter 
+    hover:shadow-gray-light 
+    active:shadow-gray-default;
+  }
+  .shadow-error {
+    @apply shadow-red-light;
+  }
+  .shadow-sucess {
+    @apply shadow-green-200;
+  }
+}

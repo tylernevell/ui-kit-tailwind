@@ -1,0 +1,27 @@
+@tailwind components;
+
+@layer components {
+  .checkbox-primary {
+    @apply h-5 
+    w-5 
+    self-center 
+    transition-all 
+    duration-200 
+    ease-in-out 
+    cursor-pointer 
+    rounded 
+    ring-gray-light 
+    ring-2 
+    border-0 
+    checked:bg-primary-default 
+    checked:focus:bg-primary-default 
+    checked:hover:bg-primary-hover 
+    checked:active:focus:bg-primary-active 
+    checked:hover:focus:bg-primary-hover 
+    focus:ring-primary-default 
+    hover:bg-gray-lightest 
+    active:bg-gray-light 
+    disabled:cursor-not-allowed 
+    disabled:checked:bg-primary-disabled;
+  }
+}

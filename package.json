@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=998973ed7f9b"
   },
   "eslintConfig": {
     "extends": [
@@ -66,6 +67,7 @@
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "autoprefixer": "^10.4.2",
+    "chromatic": "^6.4.3",
     "eslint": "^8.8.0",
     "eslint-plugin-react": "^7.28.0",
     "postcss": "^8.4.5",
