@@ -87,7 +87,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonPropTypes>((props, ref) => {
       tabIndex={0}
       disabled={disabled}
     >
-      <Typography preset="custom" {...typographyProps}>
+      <Typography variant="span" preset="custom" {...typographyProps}>
         {children}
       </Typography>
     </button>

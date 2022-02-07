@@ -8,7 +8,9 @@ export default {
 } as ComponentMeta<typeof TextField>;
 
 const Template: ComponentStory<typeof TextField> = (args) => (
-  <TextField {...args} />
+  <form>
+    <TextField {...args} />
+  </form>
 );
 
 export const CustomTextField = Template.bind({});

@@ -41,7 +41,11 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
   };
 
   return (
-    <Shadow shadowType={formIsValid === formIsEntered ? 'default' : 'error'}>
+    <div
+      className={`rounded inline-flex shadow-primary ${
+        formIsValid === formIsEntered ? 'shadow-default' : 'shadow-error'
+      }`}
+    >
       <div
         className={`${
           formIsValid === formIsEntered
@@ -71,7 +75,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
           />
         </label>
       </div>
-    </Shadow>
+    </div>
   );
 });
 

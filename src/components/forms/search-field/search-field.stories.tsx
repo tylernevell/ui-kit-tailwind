@@ -8,7 +8,9 @@ export default {
 } as ComponentMeta<typeof SearchField>;
 
 const Template: ComponentStory<typeof SearchField> = (args) => (
-  <SearchField {...args} />
+  <form>
+    <SearchField {...args} />
+  </form>
 );
 
 export const CustomSearchField = Template.bind({});

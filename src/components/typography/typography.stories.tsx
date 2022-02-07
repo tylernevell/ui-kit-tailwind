@@ -1,6 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Typography } from './typography';
-import type { PropsType } from './types';
 
 export default {
   title: 'Components/Typography',

@@ -1,6 +1,10 @@
 import 'tailwindcss/tailwind.css';
 import '../src/index.css';
 
+const modalRoot = document.createElement('div');
+modalRoot.setAttribute('id', 'overlay');
+document.body.append(modalRoot);
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {

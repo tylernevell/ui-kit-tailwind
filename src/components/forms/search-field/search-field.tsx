@@ -53,7 +53,7 @@ const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
     };
 
     return (
-      <Shadow shadowType="default" inlineFlex={false}>
+      <div className="shadow-default shadow-primary">
         <div className={styles['search-box']}>
           <Button
             type="submit"
@@ -91,7 +91,7 @@ const SearchField = forwardRef<HTMLInputElement, SearchFieldProps>(
             </div>
           </Button>
         </div>
-      </Shadow>
+      </div>
     );
   }
 );

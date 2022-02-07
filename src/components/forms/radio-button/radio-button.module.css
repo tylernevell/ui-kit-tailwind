@@ -16,8 +16,11 @@
     checked:focus:bg-primary-default 
     focus:checked:ring-2 
     focus:checked:ring-primary-default 
-    disabled:cursor-not-allowed 
     hover:bg-secondary-active 
-    focus:hover:bg-primary-hover;
+    focus:hover:bg-primary-hover 
+    disabled:cursor-not-allowed
+    disabled:bg-white-default 
+    disabled:border-primary-disabled
+    disabled:checked:bg-primary-disabled;
   }
 }

@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
-import { Button } from '../button/button';
-import { CheckmarkSVG } from '../icons/checkmark-svg';
+import { Modal } from '../modal/modal';
 import { Typography } from '../typography/typography';
 import { NotificationButtons } from './notification-buttons';
 import { ErrorIcon, InfoIcon, SuccessIcon } from './notification-icons';
@@ -15,17 +14,26 @@ interface NotificationProps {
   title?: string;
   width?: 'full' | 'responsive';
   children?: string | ReactNode;
+  onClose?: (event: React.MouseEvent | React.KeyboardEvent) => void;
+  onHelp?: (event: React.MouseEvent | React.KeyboardEvent) => void;
 }
 
 const Notification = (props: NotificationProps) => {
-  const { type, title, width = 'responsive', children = 'description' } = props;
+  const {
+    type,
+    title,
+    width = 'responsive',
+    children = 'description',
+    onClose,
+    onHelp,
+  } = props;
   const isResponsive = width === 'responsive' ? '' : 'w-full';
 
   let buttons, icon;
 
   switch (type) {
     case 'success':
-      buttons = <NotificationButtons />;
+      buttons = <NotificationButtons onClose={onClose} onHelp={onHelp} />;
       icon = <SuccessIcon />;
       break;
     case 'success-no-buttons':
@@ -35,11 +43,11 @@ const Notification = (props: NotificationProps) => {
       icon = <SuccessIcon />;
       break;
     case 'error':
-      buttons = <NotificationButtons />;
+      buttons = <NotificationButtons onClose={onClose} onHelp={onHelp} />;
       icon = <ErrorIcon />;
       break;
     case 'information':
-      buttons = <NotificationButtons />;
+      buttons = <NotificationButtons onClose={onClose} onHelp={onHelp} />;
       icon = <InfoIcon />;
       break;
   }
@@ -69,3 +77,4 @@ const Notification = (props: NotificationProps) => {
 };
 
 export { Notification };
+export type { NotificationProps };

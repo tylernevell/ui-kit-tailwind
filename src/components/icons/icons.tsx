@@ -5,12 +5,12 @@ import { MagnifyingGlassSVG } from './magnifying-glass-svg';
 
 const Icons = () => {
   return (
-    <>
+    <div className="flex">
       <MagnifyingGlassSVG />
       <CancelSVG />
       <CheckmarkSVG />
       <InfoSVG />
-    </>
+    </div>
   );
 };
 

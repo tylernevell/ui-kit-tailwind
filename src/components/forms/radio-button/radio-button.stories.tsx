@@ -8,7 +8,9 @@ export default {
 } as ComponentMeta<typeof RadioButton>;
 
 const Template: ComponentStory<typeof RadioButton> = (args) => (
-  <RadioButton {...args} />
+  <form>
+    <RadioButton {...args} />
+  </form>
 );
 
 export const CustomRadioButton = Template.bind({});

@@ -22,6 +22,7 @@
     hover:bg-gray-lightest 
     active:bg-gray-light 
     disabled:cursor-not-allowed 
+    disabled:bg-white-default 
     disabled:checked:bg-primary-disabled;
   }
 }
